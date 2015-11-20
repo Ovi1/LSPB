@@ -1,0 +1,11 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}@package LSPB
+${licensePrefix}@copyright Copyright (C) Ovidijus Baublys
+${licensePrefix}@license http://www.gnu.org/licenses/gpl.html GNU/GPL
+${licensePrefix}@time 2015
+
+<#if licenseLast??>
+${licenseLast}
+</#if>

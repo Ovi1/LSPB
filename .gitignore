@@ -3,3 +3,4 @@
 css/*.css
 css/*.css*
 images/dings-*.png
+/nbproject/private/

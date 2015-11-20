@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>LSPB</name>
+	<creationDate>2015-11-20</creationDate>
+	<author>Ovidijus Baublys</author>
+	<authorEmail>ovidijus.baublys@gmail.com</authorEmail>
+	<authorUrl>http://www.ovi-web.lt</authorUrl>
+	<copyright>Ovidijus Baublys 2015</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1</version>
+	<description>LSPB</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>bootstrap-sass</folder>
+		<folder>font-awesome</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>sass</folder>
+		<folder>fonts</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>breadcrumb</position>
+    <position>top</position>
+		<position>left</position>
+		<position>right</position>
+		<position>center</position>
+		<position>bottom</position>
+		<position>footer</position>
+	</positions>
+</extension>

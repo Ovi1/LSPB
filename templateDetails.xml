@@ -12,6 +12,7 @@
 	<description>LSPB</description>
 	<files>
 		<filename>index.php</filename>
+		<filename>logic.php</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>bootstrap-sass</folder>
 		<folder>font-awesome</folder>
@@ -19,6 +20,7 @@
 		<folder>js</folder>
 		<folder>sass</folder>
 		<folder>fonts</folder>
+		<folder>images</folder>
 	</files>
 	<positions>
 		<position>menu</position>

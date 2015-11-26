@@ -12,11 +12,10 @@ and open the template in the editor.
 // Core variables and mixins
 @import "variables";
 @import "../bootstrap-sass/bootstrap/mixins";
-
 // Reset and dependencies
 @import "../bootstrap-sass/bootstrap/normalize";
-/*@import "../bootstrap-sass/bootstrap/glyphicons";*/
-@import "../bootstrap-sass/bootstrap/print";
+@import "../bootstrap-sass/bootstrap/glyphicons";
+//@import "../bootstrap-sass/bootstrap/print";
 
 // Core CSS
 @import "../bootstrap-sass/bootstrap/scaffolding";
@@ -70,12 +69,21 @@ and open the template in the editor.
 @import "../font-awesome/mixins";
 @import "../font-awesome/path";
 @import "../font-awesome/core";
-@import "../font-awesome/larger";
+//@import "../font-awesome/larger";
 @import "../font-awesome/fixed-width";
 @import "../font-awesome/list";
-@import "../font-awesome/bordered-pulled";
-@import "../font-awesome/spinning";
-@import "../font-awesome/rotated-flipped";
-@import "../font-awesome/stacked";
+//@import "../font-awesome/bordered-pulled";
+//@import "../font-awesome/spinning";
+//@import "../font-awesome/rotated-flipped";
+//@import "../font-awesome/stacked";
 @import "../font-awesome/icons";
+
+
+
+//custom sass
+@import "base";
+@import "navbar";
+@import "buttons";
+@import "dashboard";
+@import "table";
 

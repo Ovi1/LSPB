@@ -24,12 +24,12 @@
 	</files>
 	<positions>
 		<position>menu</position>
-		<position>breadcrumb</position>
-    <position>top</position>
-		<position>left</position>
-		<position>right</position>
-		<position>center</position>
-		<position>bottom</position>
+		<position>showcase</position>
+		<position>content</position>
+		<position>box1</position>
+		<position>box2</position>
+		<position>box3</position>
+		<position>sidebar</position>
 		<position>footer</position>
 	</positions>
 </extension>

@@ -1,0 +1,33 @@
+/*
+@package LSPB
+@copyright Copyright (C) Ovidijus Baublys
+@license http://www.gnu.org/licenses/gpl.html GNU/GPL
+@time 2015
+
+*/
+/* 
+    Created on : 2015-11-26, 13.25.23
+    Author     : Ovidijus Baublys
+*/
+.navbar{
+  background-color:$nav-primary;
+  border: 0;
+  .navbar-brand{
+   color: $font-base;
+   font-weight: 900;
+  }
+}
+.jumbotron{
+  height: 800px;
+}
+.nav{
+  li {
+    a {
+      font-weight: 400;
+      &:hover,
+        :focus{
+        background-color: $bg-base;
+      }
+    }
+  }
+}

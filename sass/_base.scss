@@ -1,0 +1,29 @@
+/*
+@package LSPB
+@copyright Copyright (C) Ovidijus Baublys
+@license http://www.gnu.org/licenses/gpl.html GNU/GPL
+@time 2015
+
+*/
+/* 
+    Created on : 2015-11-26, 13.43.03
+    Author     : Ovidijus Baublys
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700,900,900italic,700italic,500,300italic,500italic);
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $font-base;
+  padding-top: 50px;
+  background: $bg-base;
+}
+a {
+  text-decoration: none;
+  color: $font-base;
+}
+

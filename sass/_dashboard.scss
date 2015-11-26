@@ -1,0 +1,117 @@
+/*
+@package LSPB
+@copyright Copyright (C) Ovidijus Baublys
+@license http://www.gnu.org/licenses/gpl.html GNU/GPL
+@time 2015
+
+*/
+/* 
+    Created on : 2015-11-26, 19.31.57
+    Author     : Ovidijus Baublys
+*/
+
+#jbMenu{
+  background-color: #fff;
+  height: 60px;
+  box-shadow: none;
+  border-radius: 0;
+  .jbMenuBar{
+    margin: 0;
+
+  }
+  li{
+    line-height: 100%;
+
+  }
+  a {
+    font-weight: 600;
+    color: $font-base;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 0;
+    text-shadow: none;
+  }
+  .jbMenuLft{
+    top:14px;
+  }
+  .jbMenuIcon {
+    display: block;
+    right: 15px;
+    position: relative;
+    top: 0;
+    height: 30px;
+    float: right;
+    left: 0;
+    z-index: 2;
+  }
+
+  #jbnav{
+    .active{
+      a{
+        background: none;
+        background-color: $bg-base;
+        border-radius: 0;
+        border: 0;
+        text-shadow: none;
+        &:hover{
+          background-color: $nav-primary;
+          color: #fff;
+        }
+      }
+    }
+    ul{
+      top:35px;
+      background: none;
+      background-color: $bg-base;
+      border-radius: 0;
+      border: 0;
+      text-shadow: none;
+      li{
+        a{
+          background-color: $bg-base;
+          border-radius: 0;
+          border: 0;
+          text-shadow: none;
+        }
+      }
+      a{
+        &:hover,
+          :focus{
+          background: none!important;
+          background-color: $nav-primary!important;
+        }
+      }
+    }
+  }
+}
+#jbnav li:hover > a{
+  background: none;
+  background-color: $bg-base;
+  border-radius: 0;
+  border: 0;
+  text-shadow: none;
+}
+
+#jbnav ul li:first-child > a {
+  border-radius: 0;
+}
+
+#jbnav ul a:hover{
+  background: none!important;
+}
+
+.jbl_h3title {
+  font-size: 28px;
+  border-top: 1px solid #eeeeee;
+  background-color: white;
+  padding: 7px 0px 7px 25px;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+#edit-profile {
+  background-color: #FFFFFF;
+  padding: 12px;
+}

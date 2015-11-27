@@ -8,13 +8,10 @@ include('logic.php');
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Joomla Head -->
-  <jdoc:include type="head" />
-  <!--  
-    <meta charset="utf-8">-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <!-- Joomla Head -->
+  <jdoc:include type="head" />
   <!-- Custom CSS -->
   <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet">
 </head>
@@ -87,7 +84,7 @@ include('logic.php');
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!--Latest compiled and minified JavaScript--> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--<script defer src="templates/<?php echo $this->template ?>/js/script.js"></script>
 

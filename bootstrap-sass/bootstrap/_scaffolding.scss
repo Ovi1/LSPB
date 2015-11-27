@@ -43,7 +43,25 @@ textarea {
 }
 
 
-// Links// Figures
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus {
+    @include tab-focus;
+  }
+}
+
+
+// Figures
 //
 // We reset this here because previously Normalize had no `figure` margins. This
 // ensures we don't break anyone's use of the element.

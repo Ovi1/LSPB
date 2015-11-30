@@ -14,6 +14,7 @@ include('logic.php');
   <jdoc:include type="head" />
   <!-- Custom CSS -->
   <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
   <!-- Menu Module -->
@@ -70,7 +71,11 @@ include('logic.php');
 
   <!-- Content -->
   <div class="col-md-12">
+    <div class="row">
+    <div class="container">
     <jdoc:include type="modules" name="content" style="xhtml" />
+    </div>
+  </div>
   </div>
 
 <div class="container-fluid">

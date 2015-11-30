@@ -50,7 +50,7 @@
   > li {
     float: left;
     // Make the list-items overlay the bottom border
-    margin-bottom: 0px;
+    margin-bottom: -1px;
 
     // Actual tabs (as links)
     > a {

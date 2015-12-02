@@ -15,6 +15,10 @@
   .navbar-brand{
     color: $font-base;
     font-weight: 900;
+    img {
+    width: auto;
+    height: 20px;
+}
   }
   .navbar-toggle .icon-bar {
     background-color: $font-base;

@@ -84,10 +84,11 @@ include('logic.php');
   </footer>
 </div>
 
-<!--<script defer src=<?php echo $this->template ?>templates/js/jquery.js"></script>-->
+	<!--<script defer src="templates/<?php echo $this->template ?>/js/jquery.js"></script>-->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 <!--Latest compiled and minified JavaScript--> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 

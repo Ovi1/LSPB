@@ -115,17 +115,22 @@
   margin-bottom: 10px;
   margin-top: 0;
 }
-#send-message,
+/*#send-message,
 #report-this,
 #edit-project,
 #edit-profile {
   background-color: $nav-primary;
   padding: 12px;
+}*/
+.page-action {
+  a {
+    font-size: 14px;
+  }
 }
-
 .sp10{
   height: 0;
 }
+
 
 .nav-header {
   text-transform: uppercase;

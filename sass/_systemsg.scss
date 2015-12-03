@@ -25,3 +25,35 @@
     border-color: $font-base;
   }
 }
+.msg-body {
+  i {
+    font-size: 18px;
+  }
+}
+.text-msg {
+  background-color: #23A9FF;
+  padding: 13px;
+  border-radius: 15px;
+  color: #fff;
+/*  display: table-cell;
+  white-space: pre-line;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;*/
+}
+.info{
+      line-height: 36px;
+}
+.author {
+    margin-right: 10px;
+    i{
+      font-size: 18px;
+    }
+}
+.border-b {
+  border-bottom: 1px solid $bg-base;
+  &:last-child {
+    border-bottom: 0;
+  }
+}

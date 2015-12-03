@@ -20,33 +20,24 @@ include('logic.php');
   <!-- Menu Module -->
 <jdoc:include type="modules" name="menu" style="none" />
 
-<!-- Showcase Module -->
 <?php if ($this->countModules('showcase')) : ?>
   <jdoc:include type="modules" name="showcase" style="none" />
 <?php endif; ?>
-
-<div class="container">
   <div class="row">
+<div class="container">
     <?php echo (isset($sidebar) ? '<div class="col-md-8">' : '<div class="col-md-12">'); ?>
-    <!-- Messages -->
     <jdoc:include type="message" />
-
     <?php if ($show_frontpage_component == 0 && $menu->getActive() == $menu->getDefault()) : ?>
-      <!-- Do not show component -->
     <?php else : ?>
-
-      <!-- Main Component -->
       <jdoc:include type="component" />
     <?php endif; ?>
-  </div><!--/. col-md-12 or .col-md-8 -->
-
-  <!-- Sidebar -->
-  <?php if (isset($sidebar)) : ?>
+      
+    <?php if (isset($sidebar)) : ?>
     <div class="col-md-4">
       <jdoc:include type="modules" name="sidebar" style="xhtml" />
     </div>
   <?php endif; ?>
-
+      
   <?php if ($this->countModules('box1') || $this->countModules('box2') || $this->countModules('box3')) : ?>
     <!-- Example row of columns -->
     <div class="row">
@@ -67,13 +58,15 @@ include('logic.php');
       <?php endif; ?>
     </div>
   <?php endif; ?>
-</div> <!-- /container -->
+</div>
+</div>
 
   <!-- Content -->
-  <div class="col-md-12">
     <div class="row">
     <div class="container">
+    <div class="col-md-12">
     <jdoc:include type="modules" name="content" style="xhtml" />
+    
     </div>
   </div>
   </div>

@@ -8,7 +8,7 @@
 	<authorUrl>http://www.ovi-web.lt</authorUrl>
 	<copyright>Ovidijus Baublys 2015</copyright>
 	<license>GNU/GPL</license>
-	<version>0.1</version>
+	<version>0.2</version>
 	<description>LSPB</description>
 	<files>
 		<filename>index.php</filename>
@@ -26,10 +26,15 @@
 		<position>menu</position>
 		<position>showcase</position>
 		<position>content</position>
+		<position>content-fluid</position>
 		<position>box1</position>
 		<position>box2</position>
 		<position>box3</position>
 		<position>sidebar</position>
-		<position>footer</position>
+		<position>foot-top</position>
+		<position>foot-left</position>
+		<position>foot-mid</position>
+		<position>foot-right</position>
+		<position>foot-bottom</position>
 	</positions>
 </extension>

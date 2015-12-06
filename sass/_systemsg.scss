@@ -11,10 +11,13 @@
 */
 
 #system-message{
+  
   margin-top: 10px;
   .alert{
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 5px 10px 0;
+    word-break: break-all;
+    
   }
   .alert-error {
     background-color: $nav-sec;
@@ -26,38 +29,45 @@
   }
 }
 .msg-body {
-  
+
   p {
-        background-color: #23A9FF;
+    background-color: #23A9FF;
     padding: 13px;
     border-radius: 15px;
     color: #fff;
     text-align: left;
     word-wrap: break-word;
     &:after {
-  content:  ' ';
-  display: table-cell; 
+      content:  ' ';
+      display: table-cell; 
+    }
   }
-  }
-  
+
   i {
     font-size: 18px;
   }
 }
-
-
-.info{
-  line-height: 36px;
+.alert.alert-message{
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  
 }
-.author {
-  margin-right: 10px;
-  i{
-    font-size: 18px;
+  .info{
+    line-height: 36px;
   }
-}
-.border-b {
-  border-bottom: 1px solid $bg-base;
-  &:last-child {
-    border-bottom: 0;
+  .author {
+    margin-right: 10px;
+    i{
+      font-size: 18px;
+    }
   }
-}
+  .border-b {
+    border-bottom: 1px solid $bg-base;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  .alert{
+    word-break: break-all;
+  }

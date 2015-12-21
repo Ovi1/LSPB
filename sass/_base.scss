@@ -342,3 +342,25 @@ small.small {
 .input-group {
   word-break: break-word;
 }
+#homesearch {
+  .col-md-6 {
+    margin: 0px auto;
+    float: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+footer {
+   background-color: $font-base;
+   min-height: 80px;
+.footer {
+ background-color: $font-base;
+ color: #fff;
+ padding: 10px;
+ a{
+   color: #fff;
+ }
+}
+}

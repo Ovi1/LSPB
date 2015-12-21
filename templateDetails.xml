@@ -25,6 +25,7 @@
 	<positions>
 		<position>menu</position>
 		<position>showcase</position>
+		<position>homesearch</position>
 		<position>content</position>
 		<position>content-fluid</position>
 		<position>box1</position>

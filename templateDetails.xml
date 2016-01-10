@@ -8,7 +8,7 @@
 	<authorUrl>http://www.ovi-web.lt</authorUrl>
 	<copyright>Ovidijus Baublys 2015</copyright>
 	<license>GNU/GPL</license>
-	<version>0.2</version>
+	<version>0.3</version>
 	<description>LSPB</description>
 	<files>
 		<filename>index.php</filename>

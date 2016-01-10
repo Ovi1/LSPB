@@ -150,3 +150,12 @@
     width: auto!important;
   }
 }
+#jbMenuNotify,
+#jbMenuInbox,
+.jbMenuIconLogout {
+  a {
+    .material-icons {
+      line-height: 0;
+    }
+  }
+}

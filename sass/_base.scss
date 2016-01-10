@@ -364,3 +364,20 @@ footer {
  }
 }
 }
+.notify-menu {
+ z-index: 1
+}
+.user-brand {
+  line-height: 50px;
+  padding-left: 5px;
+  padding-right: 10px;
+  .img-thumbnail {
+    height: 40px;
+    padding: 1px;
+  }
+}
+.dash {
+  margin-top: 2px;
+  border-radius: 0;
+  margin-bottom: 0;
+}

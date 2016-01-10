@@ -22,6 +22,7 @@ $task = JRequest::getCmd('task');
 $option = JRequest::getCmd('option');
 
 //Include Sidebar?
-if ($this->countModules('sidebar'))
-	$sidebar = true;
+if ($this->countModules('sidebar')) {
+  $sidebar = true;
+}
 ?>

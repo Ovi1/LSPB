@@ -4,6 +4,7 @@ defined('_JEXEC') or die;
 //Include Logic
 include('logic.php');
 ?>
+
 <?php
 $itemid = JRequest::getVar('Itemid');
 $menu = &JSite::getMenu();
@@ -11,13 +12,13 @@ $active = $menu->getItem($itemid);
 $params = $menu->getParams($active->id);
 $pageclass = $params->get('pageclass_sfx');
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-     <!--<script defer src="templates/<?php echo $this->template ?>/js/jquery.js"></script>-->
-
+    <!--<script defer src="templates/<?php echo $this->template ?>/js/jquery.js"></script>-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Joomla Head -->
@@ -32,6 +33,7 @@ $pageclass = $params->get('pageclass_sfx');
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
 </head>
+
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>" >
   <!-- Menu Module -->
 <jdoc:include type="modules" name="menu" style="none" />
@@ -107,5 +109,6 @@ $pageclass = $params->get('pageclass_sfx');
     </div>
   </div>
 </footer>
+
 </body>
 </html>

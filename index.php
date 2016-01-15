@@ -26,7 +26,7 @@ $pageclass = $params->get('pageclass_sfx');
   <!-- Custom CSS -->
   <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Latest compiled and minified JavaScript--> 
+  <!--Latest compiled and minified JavaScript-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
@@ -45,7 +45,7 @@ $pageclass = $params->get('pageclass_sfx');
   <div class="container">
     <jdoc:include type="message" />
   </div>
-    <?php if ($show_frontpage_component == 0 && $menu->getActive() == $menu->getDefault()) : ?>-
+    <?php if ($show_frontpage_component == 0 && $menu->getActive() == $menu->getDefault()) : ?>
     <?php else : ?>
     <div class="container">
       <jdoc:include type="component" />
@@ -89,26 +89,40 @@ $pageclass = $params->get('pageclass_sfx');
 </div>
 
 <footer class="footer">
-  <div class="col-md-12">
+  <?php if ($this->countModules ('foot-top')) :?>
+    <div class="col-md-12">
     <div class="row">
-    <jdoc:include type="modules" name="foot-top" style="xhtml" />
-    </div>
+    <jdoc:include type="modules" name="foot-top" style="none" />
   </div>
-  <div class="col-md-4">
-    <jdoc:include type="modules" name="foot-left" style="xhtml" />
   </div>
-  <div class="col-md-4">
-    <jdoc:include type="modules" name="foot-mid" style="xhtml" />
-  </div>
-  <div class="col-md-4">
-    <jdoc:include type="modules" name="foot-right" style="xhtml" />
-  </div>
-  <div class="col-md-12">
-    <div class="row">
-    <jdoc:include type="modules" name="foot-bottom" style="xhtml" />
-    </div>
-  </div>
-</footer>
+<?php endif; ?>
 
+<?php if ($this->countModules('foot-left')): ?>
+  <div class="col-md-4">
+     <jdoc:include type="modules" name="foot-left" style="none" />
+   </div>
+ <?php endif ?>
+
+ <?php if ($this->countModules('foot-mid')): ?>
+  <div class="col-md-4">
+    <jdoc:include type="modules" name="foot-mid" style="none" />
+  </div>
+  <?php endif ?>
+
+  <?php if ($this->countModules('foot-right')): ?>
+  <div class="col-md-4">
+    <jdoc:include type="modules" name="foot-right" style="none" />
+  </div>
+<?php endif ?>
+
+<?php if ($this->countModules('foot-bottom')): ?>
+  <div class="col-md-12">
+    <div class="row">
+    <jdoc:include type="modules" name="foot-bottom" style="none" />
+    </div>
+  </div>
+<?php endif ?>
+
+</footer>
 </body>
 </html>

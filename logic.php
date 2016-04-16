@@ -13,7 +13,7 @@ $doc = JFactory::getDocument();
 //Get Params Object
 $templateparams = $app->getTemplate(true)->params;
 //Get Menu Object
-$menu = &JSite::getMenu();
+$menu = JFactory::getApplication()->getMenu();
 //Get User Object
 $user = &JFactory::getUser();
 //Get Task

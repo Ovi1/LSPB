@@ -15,7 +15,6 @@
 		<filename>logic.php</filename>
 		<filename>templateDetails.xml</filename>
 		<folder>bootstrap-sass</folder>
-		<folder>font-awesome</folder>
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>sass</folder>

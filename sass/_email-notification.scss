@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-04-13, 18.53.54
+    Author     : Ovidijus Baublys
+*/
+
+#email-notification {
+    .panel-body {
+        .form-group {
+            margin-left: 0px;
+            margin-right: 0px;
+            .controls {
+                padding-top:5px;
+                .radio input[type="radio"] {
+                    display: none;
+                }
+                .btn-success {
+                    border-bottom-left-radius: 50px;
+                    border-top-left-radius: 50px;
+                }                
+                .btn-danger {
+                    border-bottom-left-radius: 0px;
+                    border-top-left-radius: 0px;
+                    border-bottom-right-radius: 50px;
+                    border-top-right-radius: 50px;
+                }  
+            } 
+        }   
+    }  
+}
+#email-notification-form {
+    .checkbox-inline {
+        .radio-inline, .checkbox-inline {
+            padding-top: 0px;
+        }
+    }
+    .radio, .checkbox {
+        border: 2px solid $font-base;
+        border-radius: 50px;
+        padding: 0;
+    }
+}

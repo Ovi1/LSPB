@@ -337,6 +337,7 @@ small.small {
 .btn {
   i {
     font-size: inherit;
+    padding-right: 5px; 
   }
 }
 .input-group {
@@ -395,5 +396,20 @@ footer {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+    }
+}
+.input-group {
+    .input-group-addon {
+        label {
+            margin-bottom: 0;
+        }
+    }
+}
+.panel-heading {
+    legend {
+        margin-bottom: 0;
+        border: 0;
+        font-size: 14px;
+        color: inherit;
     }
 }

@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-04-19, 10.38.41
+    Author     : Ovidijus Baublys
+*/
+
+
+    .notify-menu {
+        background-color: white;
+        overflow: visible;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 330px;
+        z-index: 1;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+        background-clip: padding-box;        
+        a {
+            i {
+            float: right;
+            font-size: 18px;
+            color: $bg-light;
+            }
+        }
+        .notifaction-title {
+            font-size: 24px;
+            background-color: $font-base;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+        .notifaction-body {
+            padding: 10px;
+        }
+    } 
+

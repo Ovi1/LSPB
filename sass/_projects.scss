@@ -39,15 +39,46 @@
     right: 0;
     bottom: 25px;
   }
-
+  #status {
+      padding: 0;
+      .label {
+         display: block;
+         width: 100%;
+         padding: 10px;
+         border-radius: 0;
+         
+      }
+  }
+  .media-heading {
+      margin-top: 10px;
+  }
+  .label-success+ .status {
+      border: 2px solid $open ;
+  }
+  .label-danger+ .status {
+      border: 2px solid $closed ;
+  }
+  .label-info+ .status {
+      border: 2px solid $label-info-bg ;
+  }
+  
 }
 .lineseparator{
   margin: 0;
-  border: 2px solid $bg-light;
+  border: 2px solid $bg-base;
 }
-
+.default,
+.home-page {
+    .content{
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+}
 .statistics {
   background-color: $msg-bg;
+  display: table;
   text-align: center;
   height: 100%;
   width: 100%;

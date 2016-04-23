@@ -12,4 +12,11 @@
 
 .btn{
   border-radius: 0;
+  border:0;
+}
+.btn-primary {
+    background-color: $msg-bg;
+}
+.btn-default {
+    background-color: $bg-base;
 }

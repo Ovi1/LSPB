@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-04-21, 11.27.56
+    Author     : Ovidijus Baublys
+*/
+
+.pricing.comparison {
+    padding: 10px;
+    ul {
+        padding: 0;
+        background-color: #FFFFFF;
+        .lead {
+            margin-bottom: 0;
+        }
+        .grey {
+            background-color: #5A5A5A;
+            color: #FFFFFF;
+            
+        }
+        .blue {
+            background-color: $msg-bg;
+            color: #FFFFFF;
+        }
+        li {
+            list-style: none;
+            text-transform: uppercase;
+            background-color:$bg-base;
+            padding: 8px;
+            border-bottom: 1px solid $bg-light;
+            &:first-child,
+            &:last-child {
+                border-bottom: 0
+            }
+            h3 {
+             text-transform: capitalize;
+            }
+        }
+    }  
+}

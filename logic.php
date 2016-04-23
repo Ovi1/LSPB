@@ -20,7 +20,9 @@ $user = &JFactory::getUser();
 $task = JRequest::getCmd('task');
 //Get Option
 $option = JRequest::getCmd('option');
-
+//unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
+//  
+// unset($doc->_stylesheets[$this->baseurl.'/media/jui/js/bootstrap.css']);
 //Include Sidebar?
 if ($this->countModules('sidebar')) {
   $sidebar = true;

@@ -98,7 +98,7 @@
       &:focus {
         color: $nav-tabs-active-link-hover-color;
         background-color: $nav-tabs-active-link-hover-bg;
-        border: 1px solid $nav-tabs-active-link-hover-border-color;
+        border: 0;
         border-bottom-color: transparent;
         cursor: default;
       }
@@ -144,7 +144,7 @@
   > li {
     float: none;
     + li {
-      margin-top: 2px;
+      margin-top: 0;
       margin-left: 0; // no need for this gap between nav items
     }
   }

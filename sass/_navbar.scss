@@ -9,105 +9,132 @@
     Created on : 2015-11-26, 13.25.23
     Author     : Ovidijus Baublys
 */
-.home-page{
-  padding:0;
-  .navbar  {
-    background-color:transparent !important;
-    &{
-      .container{
-        background-color:transparent !important;
-      }
+
+
+.home-page {
+    padding:0;
+    .navbar  {
+        *background-color:transparent !important;
+        &{
+            .container{
+                background-color:transparent !important;
+            }
+        }
+        
     }
-  }
-  .navbar-fixed-top {
-    position: absolute !important;
-  }
-  .jumbotron {
-    .container {
-      position: absolute;
-      height: 550px;
-      top: 22%;
-      left: 0;
-      right: 0;
+    .navbar-fixed-top {
+        position: absolute !important;
     }
-  }  
+    .jumbotron {
+        .container {
+            position: absolute;
+            height: 550px;
+            top: 22%;
+            left: 0;
+            right: 0;
+        }
+    }
+    .navbar-default {
+        .navbar-nav {
+            li {
+                a {
+                    color: $font-base;
+                }
+            }
+        }
+    }
 }
-.navbar{
-  background-color:$nav-primary;
-  border: 0;
-  .navbar-brand{
-    color: $font-base;
-    font-weight: 900;
-    img {
-    width: auto;
-    height: 20px;
-}
-  }
-  .navbar-toggle .icon-bar {
-    background-color: $font-base;
-  }
+
+.navbar {
+    background-color:$msg-bg;
+    margin-bottom: 0;
+    border: 0;
+    .navbar-brand {
+        color: $font-base;
+        font-weight: 900;
+        img {
+            width: auto;
+            height: 20px;
+            .navbar-toggle {
+                border: 0;
+            }
+        }
+    }
+    .navbar-toggle .icon-bar {
+        background-color: $font-base;
+    }
 }
 .jumbotron{
-  height: 800px;
+    height: 800px;
 }
 .nav{
     li {
-
         font-weight: 400;
         &:hover,
-            &:focus{
+            &:focus {
             background-color: transparent;
         }
 
     }
 }
-@media (max-width: 767px) {
-  .navbar{
-    .navbar-collapse{
-      /*to do*/
-      box-shadow: 0px 1px 2px rgba(0, 0, 0, 75);
-      border-top: 1px solid $font-base;
+.navbar-default {
+    .navbar-nav {
+        li {
+            a {
+                line-height: 24px;
+                color: $font-base;
+            }
+        }
     }
-  }
+}
+@media (max-width: 767px) {
+    .navbar{
+        .navbar-collapse{
+            /*to do*/
+            *box-shadow: 0px 1px 2px rgba(0, 0, 0, 75);
+            border-top: 1px solid $font-base;
+        }
+    }
 }
 
 .nav-tabs {
-  background-color: $bg-light;
-  border-bottom: 0;
-  > li {
-    float: left;
-    // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
+    background-color: $font-base;
+    border-bottom: 0;
+    > li {
+        float: left;
+        // Make the list-items overlay the bottom border
+        margin-bottom: -1px;
 
-    // Actual tabs (as links)
-    > a {
-      margin-right: 0;
-      line-height: $line-height-base;
-      border: 0;
-      border-radius:0;
-      &:hover {
-        background-color: #fff;
-        border: 0;
-      }
-    }
-    
+        // Actual tabs (as links)
+        > a {
+            margin-right: 0;
+            line-height: $line-height-base;
+            border: 0;
+            border-radius:0;
+            color: #FFFFFF;
+            &:hover {
+                background-color: #FFFFFF;
+                border: 0;
+                color: $msg-bg;
+            }
+        }
 
-    // Active state, and its :hover to override normal :hover
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $nav-tabs-active-link-hover-color;
-        background-color: $nav-tabs-active-link-hover-bg;
-        border: 0;
-        border-bottom-color: transparent;
-        cursor: default;
-      }
+
+        // Active state, and its :hover to override normal :hover
+        &.active > a {
+            &:hover,
+            &:focus {
+                color: $nav-tabs-active-link-hover-color;
+                background-color: $nav-tabs-active-link-hover-bg;
+                border: 0;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
+        }
     }
-  }
-  // pulling this in mainly for less shorthand
-  &.nav-justified {
-    @extend .nav-justified;
-    @extend .nav-tabs-justified;
-  }
+    // pulling this in mainly for less shorthand
+    &.nav-justified {
+        @extend .nav-justified;
+        @extend .nav-tabs-justified;
+    }
 }

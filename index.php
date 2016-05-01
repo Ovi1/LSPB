@@ -14,7 +14,7 @@ $user = JFactory::getUser();
 
 $config = JblanceHelper::getConfig();
 $link_dashboard = JRoute::_('index.php?option=com_jblance&view=user&layout=dashboard');
-
+$link_logout = JRoute::_('index.php?option=com_users&task=user.logout&' . JSession::getFormToken() . '=1&return=' . base64_encode($link_home));
 
 
 $language = JFactory::getLanguage();
@@ -30,6 +30,7 @@ $params = $menu->getParams($active->id);
 $pageclass = $params->get('pageclass_sfx');
 
 jbimport('fbconnect');
+
 $fb = new FbconnectHelper();
 $user_info = $fb->initFbLogin();
 
@@ -52,6 +53,7 @@ if (empty($app_id) || empty($app_sec)) {
     <jdoc:include type="head" />
     <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!--Latest compiled and minified JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -60,6 +62,8 @@ if (empty($app_id) || empty($app_sec)) {
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>" >
     <!-- Menu Module -->
 <jdoc:include type="modules" name="menu" style="none" />
+<!--lang-->
+<jdoc:include type="modules" name="language" style="none" />
 
 
 <?php if ($this->countModules('showcase')) : ?>
@@ -73,17 +77,18 @@ if (!$user->guest) {
 } else {
 
     echo '<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#userlogin">';
-    echo JText::_('COM_JBLANCE_LOGIN');
+    echo JText::_('COM_JBLANCE_LOGIN') . '/';
+    echo JText::_('COM_JBLANCE_REGISTER');
     echo '</button>';
 }
 ?>
 </div>
 
 <div class="container">
-
     <jdoc:include type="message" />
 </div>
-<?php if ($show_frontpage_component == 0 && $menu->getActive() == $menu->getDefault()) : ?>
+
+<?php if ($show_frontpage_component === 0 && $menu->getActive() === $menu->getDefault()) : ?>
 <?php else : ?>
     <div class="container">
         <jdoc:include type="component" />
@@ -117,17 +122,22 @@ if (!$user->guest) {
 <?php endif; ?>
 
 <!-- Content -->
-<div class="container">
-    <jdoc:include type="modules" name="content" style="xhtml" />
-</div>
+<?php if ($this->countModules('content')) : ?>
+    <div class="container">
+        <jdoc:include type="modules" name="content" style="xhtml" />
+    </div>
+<?php endif; ?>
 
 <!-- Content-fluid -->
-<div class="container-fluid">
-    <jdoc:include type="modules" name="content-fluid" style="xhtml" />
-</div>
+<?php if ($this->countModules('content-fluid')) : ?>
 
-<footer class="footer">
-    <?php if ($this->countModules('foot-top')) : ?>
+    <div class="container-fluid">
+        <jdoc:include type="modules" name="content-fluid" style="xhtml" />
+    </div>
+<?php endif; ?>
+
+    <footer class="footer">
+<?php if ($this->countModules('foot-top')) : ?>
         <div class="col-md-12">
             <div class="row">
                 <jdoc:include type="modules" name="foot-top" style="none" />
@@ -159,9 +169,9 @@ if (!$user->guest) {
                 <jdoc:include type="modules" name="foot-bottom" style="none" />
             </div>
         </div>
-    <?php endif ?>
+<?php endif ?>
+    </footer>
 
-</footer>
 
 <!-- Modal -->
 <div class="modal fade" id="userlogin" tabindex="-1" role="dialog" aria-labelledby="userlogin">
@@ -200,17 +210,26 @@ if (!$user->guest) {
                                     </span>
                                 </div>
                             </div>
-                            <div class="checkbox">
-                                <label class="checkbox">
-                                    <input type="checkbox" alt="Remember me" value="yes" id="remember" name="remember" /><?php echo JText::_('COM_JBLANCE_REMEMBER_ME'); ?>
-                                </label>
-                                <input type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-small" />
-                                <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
-                                    <a class="btn btn-primary btn-small" href="<?php echo $user_info['loginUrl']; ?>">
-                                        <span><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></span>
-                                    </a> 
-                                <?php }
-                                ?>
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <div class="checkbox-inline">
+                                        <input type="checkbox" alt="Remember me" value="yes" id="remember" name="remember" /><?php echo JText::_('COM_JBLANCE_REMEMBER_ME'); ?>
+                                    </div>
+                                    <input type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary btn-block" />
+
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="form-group">
+
+                                    <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
+                                        <a class="btn btn-default" href="<?php echo $user_info['loginUrl']; ?>">
+                                            <span><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></span>
+                                        </a> 
+                                    <?php }
+                                    ?>
+                                    <?php echo $user_info['email']; ?>
+                                </div>
                             </div>
 
                             <input type="hidden" name="option" value="com_users" />
@@ -220,14 +239,25 @@ if (!$user->guest) {
                         </form>
                     </div>
                 <?php else : ?>
-                    <div class="jb-loginform">
+                    <div class="logedin">
                         <h4><?php echo JText::sprintf('COM_JBLANCE_WELCOME_USER', $user->name); ?></h4>
+                        <jdoc:include type="modules" name="balance" style="none" />
                     </div>
                 <?php endif; ?>
             </div>
+            <div class="modal-footer">
+                <?php
+                if (!$user->guest) {
+                    echo "<a  href='$link_logout' class=\"btn btn-danger\"><i class=\"material-icons\">exit_to_app</i></a>";
+                } else {
+
+                    echo '<a class="btn btn-success btn-block" href="component/users/?view=registration">';
+                    echo JText::_('COM_JBLANCE_REGISTER');
+                    echo '</a>';
+                }
+                ?>
+            </div>
         </div>
-        <!--      <div class="modal-footer">
-              </div>-->
     </div>
 </div>
 </body>

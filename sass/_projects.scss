@@ -61,7 +61,10 @@
   .label-info+ .status {
       border: 2px solid $label-info-bg ;
   }
-  
+  .promotions {
+    position: absolute;
+    z-index: 1;
+  }
 }
 .lineseparator{
   margin: 0;
@@ -80,11 +83,35 @@
   background-color: $msg-bg;
   display: table;
   text-align: center;
-  height: 100%;
   width: 100%;
   min-height: 80px;
   color: #fff;
   .statcount {
     text-align: center;
+  }
+}
+#myprojects {
+    .label {
+         display: block;
+         width: 100%;
+         padding: 6px;
+         border-radius: 0;
+   }
+   .progress {
+       margin-bottom: 2px;
+       border-radius: 0;
+   }
+   .thumbnail {
+       border-radius: 0;
+       border: 2px;
+   }
+  .label-success + .thumbnail {
+      border: 2px solid $open ;
+  }
+  .label-danger+ .thumbnail {
+      border: 2px solid $closed ;
+  }
+  .label-info+ .thumbnail {
+      border: 2px solid $label-info-bg ;
   }
 }

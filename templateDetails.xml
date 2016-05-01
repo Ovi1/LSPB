@@ -27,6 +27,8 @@
 		<position>homesearch</position>
 		<position>content</position>
 		<position>content-fluid</position>
+		<position>balance</position>
+		<position>language</position>
 		<position>box1</position>
 		<position>box2</position>
 		<position>box3</position>

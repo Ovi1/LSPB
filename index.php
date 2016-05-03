@@ -4,13 +4,14 @@ defined('_JEXEC') or die;
 //Include Logic
 include('logic.php');
 ?>
-
-<?php
-?>
 <?php
 $app = JFactory::getApplication();
 $user = JFactory::getUser();
 //$model = $this->getModel();
+$userid = $app->input->get('id', 0, 'int');
+if (empty($userid)) {  // get the current userid if not passed
+    $userid = $user->id;
+}
 
 $config = JblanceHelper::getConfig();
 $link_dashboard = JRoute::_('index.php?option=com_jblance&view=user&layout=dashboard');
@@ -24,10 +25,11 @@ $language_tag = $language->getTag(); // loads the current language-tag
 $language->load($extension, $base_dir, $language_tag, true);
 
 $itemid = JRequest::getVar('Itemid');
-$menu = &JSite::getMenu();
+$menu =   &JSite::getMenu();
 $active = $menu->getItem($itemid);
 $params = $menu->getParams($active->id);
 $pageclass = $params->get('pageclass_sfx');
+
 
 jbimport('fbconnect');
 
@@ -136,8 +138,8 @@ if (!$user->guest) {
     </div>
 <?php endif; ?>
 
-    <footer class="footer">
-<?php if ($this->countModules('foot-top')) : ?>
+<footer class="footer">
+    <?php if ($this->countModules('foot-top')) : ?>
         <div class="col-md-12">
             <div class="row">
                 <jdoc:include type="modules" name="foot-top" style="none" />
@@ -169,8 +171,8 @@ if (!$user->guest) {
                 <jdoc:include type="modules" name="foot-bottom" style="none" />
             </div>
         </div>
-<?php endif ?>
-    </footer>
+    <?php endif ?>
+</footer>
 
 
 <!-- Modal -->
@@ -215,23 +217,15 @@ if (!$user->guest) {
                                     <div class="checkbox-inline">
                                         <input type="checkbox" alt="Remember me" value="yes" id="remember" name="remember" /><?php echo JText::_('COM_JBLANCE_REMEMBER_ME'); ?>
                                     </div>
-                                    <input type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary btn-block" />
-
                                 </div>
                             </div>
-                            <div class="input-group">
-                                <div class="form-group">
-
-                                    <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
-                                        <a class="btn btn-default" href="<?php echo $user_info['loginUrl']; ?>">
-                                            <span><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></span>
-                                        </a> 
+                                              <div class="btn-group">
+                                    <button type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary" /><?php echo JText::_('COM_JBLANCE_LOGIN'); ?></button>
+          <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
+                                        <a class="btn btn-default" href="<?php echo $user_info['loginUrl']; ?>"><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></a> 
                                     <?php }
                                     ?>
-                                    <?php echo $user_info['email']; ?>
-                                </div>
-                            </div>
-
+                                    </div>
                             <input type="hidden" name="option" value="com_users" />
                             <input type="hidden" name="task" value="user.login" />
                             <input type="hidden" name="return" value="<?php echo base64_encode($link_dashboard); ?>"/>
@@ -240,6 +234,13 @@ if (!$user->guest) {
                     </div>
                 <?php else : ?>
                     <div class="logedin">
+                        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                            <?php
+                            $att = "class='img-thumbnail img-responsive'";
+                            $avatar = JblanceHelper::getLogo($userid, $att);
+                            echo $avatar;
+                            ?>
+                        </div>
                         <h4><?php echo JText::sprintf('COM_JBLANCE_WELCOME_USER', $user->name); ?></h4>
                         <jdoc:include type="modules" name="balance" style="none" />
                     </div>

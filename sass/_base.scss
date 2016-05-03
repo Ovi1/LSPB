@@ -268,7 +268,7 @@ fieldset {
         margin: 0;
         width:  12px;
         height: 12px;
-        background-color: $nav-sec;
+        background-color: $msg-bg;
     }
 }
 
@@ -340,6 +340,13 @@ small.small {
         padding-right: 5px; 
     }
 }
+.modal-footer {
+    .btn {
+        i {
+            padding: 0;
+        }
+    }
+}
 .input-group {
     word-break: break-word;
 }
@@ -406,6 +413,9 @@ small.small {
         }
     }
 }
+.panel {
+    margin-bottom: 10px;
+}
 .panel-heading {
     legend {
         margin-bottom: 0;
@@ -456,4 +466,17 @@ small.small {
     z-index: 1;
     top: 15px;
     right: 10px;
+}
+@media all and (max-width:1024px) {
+    .mod-languages {
+        right: 78px;
+    }
+}
+.panel {
+    border: 0;
+}
+.panel,
+.panel-default,
+.panel-heading {
+    border-radius: 0;
 }

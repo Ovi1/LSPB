@@ -11,107 +11,168 @@
 */
 
 #projectBox {
-  background-color: #ffffff;
-  margin: 0;
-  .bid_project_left {
-    box-shadow: none;
-    font-size: 12px;
-    font-family: inherit;
-    min-width: 100px; 
-    min-height: 150px; 
-    line-height:  150px;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    text-align: center;
-    padding: 5px 20px;
-    font-weight: 600;
-    border-radius: 0;
-  }
-  .font16 {
-    font-size: 24px;
-  }
-  .avg{
-    text-align: center;
-    color: $bg-base;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 25px;
-  }
-  #status {
-      padding: 0;
-      .label {
-         display: block;
-         width: 100%;
-         padding: 10px;
-         border-radius: 0;
-         
-      }
-  }
-  .media-heading {
-      margin-top: 10px;
-  }
-  .label-success+ .status {
-      border: 2px solid $open ;
-  }
-  .label-danger+ .status {
-      border: 2px solid $closed ;
-  }
-  .label-info+ .status {
-      border: 2px solid $label-info-bg ;
-  }
-  .promotions {
-    position: absolute;
-    z-index: 1;
-  }
+    background-color: #ffffff;
+    margin: 0;
+    .bid_project_left {
+        box-shadow: none;
+        font-size: 12px;
+        font-family: inherit;
+        min-width: 100px; 
+        min-height: 150px; 
+        line-height:  150px;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        text-align: center;
+        padding: 5px 20px;
+        font-weight: 600;
+        border-radius: 0;
+    }
+    .font16 {
+        font-size: 24px;
+    }
+    .avg{
+        text-align: center;
+        color: $bg-base;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+    }
+    #status {
+        padding: 0;
+        .label {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 0;
+
+        }
+    }
+    .media-heading {
+        margin-top: 10px;
+    }
+    .label-success+ .status {
+        border: 2px solid $open ;
+    }
+    .label-danger+ .status {
+        border: 2px solid $closed ;
+    }
+    .label-info+ .status {
+        border: 2px solid $label-info-bg ;
+    }
+    .promotions {
+        position: absolute;
+        z-index: 1;
+    }
 }
 .lineseparator{
-  margin: 0;
-  border: 2px solid $bg-base;
+    margin: 0;
+    border: 2px solid $bg-base;
 }
 .default,
 .home-page {
     .content{
-    .container-fluid {
-        padding-left: 0;
-        padding-right: 0;
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }
-}
 .statistics {
-  background-color: $msg-bg;
-  display: table;
-  text-align: center;
-  width: 100%;
-  min-height: 80px;
-  color: #fff;
-  .statcount {
+    background-color: $msg-bg;
+    display: table;
     text-align: center;
-  }
+    width: 100%;
+    min-height: 80px;
+    color: #fff;
+    .statcount {
+        text-align: center;
+    }
 }
 #myprojects {
     .label {
-         display: block;
-         width: 100%;
-         padding: 6px;
-         border-radius: 0;
-   }
-   .progress {
-       margin-bottom: 2px;
-       border-radius: 0;
-   }
-   .thumbnail {
-       border-radius: 0;
-       border: 2px;
-   }
-  .label-success + .thumbnail {
-      border: 2px solid $open ;
-  }
-  .label-danger+ .thumbnail {
-      border: 2px solid $closed ;
-  }
-  .label-info+ .thumbnail {
-      border: 2px solid $label-info-bg ;
-  }
+        display: block;
+        width: 100%;
+        padding: 6px;
+        border-radius: 0;
+    }
+    .progress {
+        margin-bottom: 2px;
+        border-radius: 0;
+    }
+    .thumbnail {
+        border-radius: 0;
+        border: 2px;
+        h5 {
+            word-break: break-all;
+            .label {
+                display: initial;
+                padding: 2px 4px;
+            }
+        }
+    }
+    .label-success + .thumbnail {
+        border: 2px solid $open ;
+    }
+    .label-danger+ .thumbnail {
+        border: 2px solid $closed ;
+    }
+    .label-info+ .thumbnail {
+        border: 2px solid $label-info-bg ;
+    }
 }
+#mybids {
+    .label {
+        display: block;
+        width: 100%;
+        padding: 6px;
+        border-radius: 0;
+    }
+    .progress {
+        margin-bottom: 2px;
+        border-radius: 0;
+    }
+    .thumbnail {
+        border-radius: 0;
+        border: 2px;
+        h5 {
+            word-break: break-all;
+            .label {
+                display: initial;
+                padding: 2px 4px;
+            }
+        }
+    }
+    .label-success + .thumbnail {
+        border: 2px solid $open ;
+    }
+    .label-danger+ .thumbnail {
+        border: 2px solid $closed ;
+    }
+    .label-info+ .thumbnail {
+        border: 2px solid $label-info-bg ;
+    }
+    .thumbnail {
+        .pay-status, 
+        .bid-status {
+            .label {
+                display: inline;
+                width: auto;
+                padding: 2px 4px;
+            }
+        }
+    }
+    .progress-bar {
+        color: $font-base;
+    }
+}
+// FIX for col-md-3 in infinite-scroll;
+    @media all and (min-width: 998px){
+      #myprojects:nth-child(3n+1),
+      #mybids:nth-child(3n+1) {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    }

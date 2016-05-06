@@ -101,7 +101,7 @@
     background-color: $font-base;
     border-bottom: 0;
     > li {
-        float: left;
+        float: none;
         // Make the list-items overlay the bottom border
         margin-bottom: -1px;
 

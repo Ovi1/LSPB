@@ -501,3 +501,13 @@ small.small {
     height: 14px;
     width: auto;
 }
+@media all and (max-width:767px) {
+
+    .jbl_h3title {
+        .pull-right {
+            float: none!important;
+        }
+    }
+
+    
+}

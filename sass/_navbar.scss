@@ -20,11 +20,11 @@
                 background-color:transparent !important;
             }
         }
-        
+
     }
-/*    .navbar-fixed-top {
-        position: absolute !important;
-    }*/
+    /*    .navbar-fixed-top {
+            position: absolute !important;
+        }*/
     .jumbotron {
         .container {
             position: absolute;
@@ -95,13 +95,18 @@
             border-top: 1px solid $font-base;
         }
     }
+    .nav-tabs {
+        > li {
+            float: none;
+        }
+    }
 }
 
 .nav-tabs {
     background-color: $font-base;
     border-bottom: 0;
     > li {
-        float: none;
+        float: left;
         // Make the list-items overlay the bottom border
         margin-bottom: -1px;
 
@@ -123,7 +128,7 @@
         // Active state, and its :hover to override normal :hover
         &.active > a {
             &:hover,
-            &:focus {
+                &:focus {
                 color: $nav-tabs-active-link-hover-color;
                 background-color: $nav-tabs-active-link-hover-bg;
                 border: 0;

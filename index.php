@@ -25,7 +25,7 @@ $language_tag = $language->getTag(); // loads the current language-tag
 $language->load($extension, $base_dir, $language_tag, true);
 
 $itemid = JRequest::getVar('Itemid');
-$menu =   &JSite::getMenu();
+$menu = &JSite::getMenu();
 $active = $menu->getItem($itemid);
 $params = $menu->getParams($active->id);
 $pageclass = $params->get('pageclass_sfx');
@@ -172,6 +172,9 @@ if (!$user->guest) {
             </div>
         </div>
     <?php endif ?>
+    <a href="http://www.ovi-web.lt" target="_blank">
+    <img class="ovi" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template?>/images/ovi.png">
+    </a>
 </footer>
 
 
@@ -219,13 +222,15 @@ if (!$user->guest) {
                                     </div>
                                 </div>
                             </div>
-                                              <div class="btn-group">
-                                    <button type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary" /><?php echo JText::_('COM_JBLANCE_LOGIN'); ?></button>
-          <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
-                                        <a class="btn btn-default" href="<?php echo $user_info['loginUrl']; ?>"><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></a> 
-                                    <?php }
-                                    ?>
-                                    </div>
+                            <div class="btn-group">
+                                <button type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary"><?php echo JText::_('COM_JBLANCE_LOGIN'); ?></button>
+                                <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
+
+                                    <a class="btn btn-fb" href="<?php echo $user_info['loginUrl']; ?>"><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?><img class="fb" src="components/com_jblance/images/fb.png"></a> 
+
+                                <?php }
+                                ?>
+                            </div>
                             <input type="hidden" name="option" value="com_users" />
                             <input type="hidden" name="task" value="user.login" />
                             <input type="hidden" name="return" value="<?php echo base64_encode($link_dashboard); ?>"/>

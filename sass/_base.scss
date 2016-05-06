@@ -19,9 +19,9 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: $font-base;
-    *padding-top: 52px;
     background: $bg-base;
 }
+
 a {
     text-decoration: none;
     color: $font-base;
@@ -463,7 +463,7 @@ small.small {
 .mod-languages {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 15px;
     right: 10px;
 }
@@ -472,6 +472,7 @@ small.small {
         right: 78px;
     }
 }
+
 .panel {
     border: 0;
 }
@@ -479,4 +480,24 @@ small.small {
 .panel-default,
 .panel-heading {
     border-radius: 0;
+}
+@media all and (max-width:1600px) {
+
+    .jumbotron {
+        background-position-y: 0!important;
+        background-position-x: 0!important;
+    }
+}
+.footer1 {
+    text-align: center;
+}
+.footer2 {
+    display: none;
+}
+.dropdown {
+    display: block!important;
+}
+.ovi {
+    height: 14px;
+    width: auto;
 }

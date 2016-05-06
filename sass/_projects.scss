@@ -169,8 +169,8 @@
 }
 // FIX for col-md-3 in infinite-scroll;
     @media all and (min-width: 998px){
-      #myprojects:nth-child(3n+1),
-      #mybids:nth-child(3n+1) {
+      #myprojects:nth-child(4n+1),
+      #mybids:nth-child(4n+1) {
         content: "";
         display: table;
         clear: both;

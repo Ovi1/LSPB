@@ -20,3 +20,16 @@
 .btn-default {
     background-color: $bg-base;
 }
+.fb {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+}
+.btn-fb {
+        background-color: #3B5998;
+        color: #FFFFFF;
+        &:hover {
+        color: #FFFFFF;
+        }
+}

@@ -9,7 +9,9 @@
     Created on : 2015-11-27, 03.17.10
     Author     : Ovidijus Baublys
 */
-
+#messageList {
+    overflow-y: scroll;
+}
 #system-message{
   
   margin-top: 10px;
@@ -32,6 +34,7 @@
 
   p {
     background-color: #23A9FF;
+    display: inline-block;
     padding: 13px;
     border-radius: 15px;
     color: #fff;
@@ -87,6 +90,7 @@
     display: block; 
     border-radius: 3px;
     font-size: 12px;
+    line-height: 14px;
     min-width: 18px;
     width: auto;
     height: 18px;

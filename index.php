@@ -226,7 +226,7 @@ if (!$user->guest) {
                                 <button type="submit" value="<?php echo JText::_('COM_JBLANCE_LOGIN'); ?>" name="submit" id="submit" class="btn btn-primary"><?php echo JText::_('COM_JBLANCE_LOGIN'); ?></button>
                                 <?php if ($user_info['loginUrl'] != '' && $showFbConnect) { ?>
 
-                                    <a class="btn btn-fb" href="<?php echo $user_info['loginUrl']; ?>"><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?><img class="fb" src="components/com_jblance/images/fb.png"></a> 
+                                    <a class="btn btn-fb" href="<?php echo $user_info['loginUrl']; ?>"><img class="fb" src="components/com_jblance/images/fb.png"><?php echo JText::_('COM_JBLANCE_SIGN_IN_WITH_FACEBOOK'); ?></a> 
 
                                 <?php }
                                 ?>

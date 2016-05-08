@@ -90,14 +90,7 @@
 @media (max-width: 767px) {
     .navbar{
         .navbar-collapse{
-            /*to do*/
-            *box-shadow: 0px 1px 2px rgba(0, 0, 0, 75);
             border-top: 1px solid $font-base;
-        }
-    }
-    .nav-tabs {
-        > li {
-            float: none;
         }
     }
 }
@@ -141,5 +134,12 @@
     &.nav-justified {
         @extend .nav-justified;
         @extend .nav-tabs-justified;
+    }
+}
+@media (max-width: 768px) {
+    .nav-tabs {
+        > li {
+            float: none;
+        }
     }
 }

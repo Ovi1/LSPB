@@ -465,11 +465,16 @@ small.small {
     position: absolute;
     z-index: 2;
     top: 15px;
-    right: 10px;
+    right: 5px;
 }
-@media all and (max-width:1024px) {
+@media all and (max-width:767px) {
     .mod-languages {
-        right: 78px;
+        right: 65px;
+    }
+}
+@media all and (min-width:768px) and (max-width:769px) {
+    .mod-languages {
+        right: 0;
     }
 }
 
@@ -598,4 +603,14 @@ small.small {
            } 
     }
 }
+}
+@media all and (max-width: 800px) {
+    .panel-heading {
+        h3 {
+            .pull-right {
+                float: none!important;
+                
+            }  
+        }
+    }
 }

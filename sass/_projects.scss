@@ -53,13 +53,16 @@
         margin-top: 10px;
     }
     .label-success+ .status {
-        border: 2px solid $open ;
+        border: 2px solid $open;
     }
     .label-danger+ .status {
-        border: 2px solid $closed ;
+        border: 2px solid $closed;
     }
     .label-info+ .status {
-        border: 2px solid $label-info-bg ;
+        border: 2px solid $label-info-bg;
+    }
+    .label-warning+ .status {
+        border: 2px solid $label-warning-bg;
     }
     .promotions {
         position: absolute;
@@ -118,6 +121,9 @@
     .label-danger+ .thumbnail {
         border: 2px solid $closed ;
     }
+    .label-warning+ .thumbnail {
+        border: 2px solid $label-warning-bg ;
+    }
     .label-info+ .thumbnail {
         border: 2px solid $label-info-bg ;
     }
@@ -145,13 +151,17 @@
         }
     }
     .label-success + .thumbnail {
-        border: 2px solid $open ;
+        border: 2px solid $open;
     }
     .label-danger+ .thumbnail {
-        border: 2px solid $closed ;
+        border: 2px solid $closed;
     }
     .label-info+ .thumbnail {
-        border: 2px solid $label-info-bg ;
+        border: 2px solid $label-info-bg;
+    }
+    .label-warning+ .thumbnail {
+        border: 2px solid $label-warning-bg;
+        
     }
     .thumbnail {
         .pay-status, 
@@ -169,8 +179,8 @@
 }
 // FIX for col-md-3 in infinite-scroll;
     @media all and (min-width: 998px){
-      #myprojects:nth-child(4n+1),
-      #mybids:nth-child(4n+1) {
+      #myprojects:nth-child(3n+1),
+      #mybids:nth-child(3n+1) {
         content: "";
         display: table;
         clear: both;
